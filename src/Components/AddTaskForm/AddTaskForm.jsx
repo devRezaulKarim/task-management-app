@@ -7,17 +7,16 @@ export default function AddTaskForm() {
     e.preventDefault();
 
     const elements = [...e.target.elements];
-    const task = elements[0].value;
+    const task = elements[0].value.trim();
     const newTask = {
       id: Date.now(),
       isComplete: false,
       task,
     };
-    if (task.trim() > 0) {
+    if (task.length > 0) {
       addTask(newTask);
       elements[0].value = "";
-    }
-    else alert("")
+    } else alert("Task can't be empty.");
   };
   return (
     <div className="addTaskForm">

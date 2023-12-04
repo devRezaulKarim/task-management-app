@@ -3,7 +3,10 @@ import { createContext, useEffect, useReducer } from "react";
 import { reducer } from "./useReduce.js";
 import { types } from "./actionTypes.js";
 
-const initValue = JSON.parse(localStorage.getItem("initValue")) ?? {};
+const initValue = JSON.parse(localStorage.getItem("initValue")) ?? {
+  tasks: [],
+};
+
 export const GlobalContext = createContext(initValue);
 
 export const GlobalProvider = ({ children }) => {
@@ -16,9 +19,15 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
+  function completeTask(id) {
+    dispatch({
+      type: types.completeTask,
+      payload: id,
+    });
+  }
   function deleteTask(id) {
     dispatch({
-      type: types.addTask,
+      type: types.deleteTask,
       payload: id,
     });
   }
@@ -33,6 +42,7 @@ export const GlobalProvider = ({ children }) => {
         tasks: state.tasks,
         addTask,
         deleteTask,
+        completeTask,
       }}
     >
       {children}
