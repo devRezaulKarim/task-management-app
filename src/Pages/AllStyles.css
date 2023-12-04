@@ -33,6 +33,7 @@
 .addTaskForm {
   width: 70%;
   margin: auto;
+  padding-bottom: 3rem;
   & form {
     position: relative;
 
@@ -98,6 +99,89 @@
     }
   }
 }
+
+.tasksList {
+  margin: auto;
+  width: 90%;
+  box-shadow: 0 0 0.5rem 0.2rem lightgray;
+  border-radius: 0.8rem;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  column-gap: 3rem;
+  row-gap: 2rem;
+  & .taskItem {
+    padding: 1rem;
+    background-color: #caf3e7;
+    border-radius: 0.4rem;
+    border: 2px solid #1a936f;
+
+    & .task {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    & .btns {
+      display: flex;
+      justify-content: space-between;
+
+      & div {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 2.2rem;
+        font-weight: 600;
+        border: 1px solid #1a936f;
+        background-color: #1a936f;
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.4rem;
+        color: #fff;
+        transition: all 0.2s;
+
+        &:hover {
+          background-color: transparent;
+          color: #1a936f;
+          border: 1px solid #1a936f;
+        }
+      }
+      & button {
+        font-size: 1.5rem;
+        padding: 0.2rem 0.5rem;
+        background-color: #1a936f;
+        border: 1px solid #1a936f;
+        border-radius: 0.4rem;
+        color: #fff;
+        transition: all 0.2s;
+
+        & .editIcon {
+          font-size: 1.3rem;
+          margin-right: 0.5rem;
+        }
+        & .deleteIcon {
+          padding-top: 0.2rem;
+          font-size: 1.5rem;
+          margin-right: 0.2rem;
+        }
+
+        &:hover:last-child {
+          background-color: transparent;
+          color: red;
+          border: 1px solid red;
+        }
+
+        &:hover {
+          background-color: transparent;
+          color: rgb(245, 189, 6);
+          border: 1px solid rgb(245, 189, 6);
+        }
+      }
+    }
+  }
+}
+
+/**
+responsive
+
+*/
 
 @media (max-width: 991.98px) {
   .homeContainer {
@@ -166,6 +250,7 @@
         &::after {
           bottom: 0.3rem;
           height: 0.3rem;
+          left: 2rem;
         }
         &:hover::after {
           width: 40%;

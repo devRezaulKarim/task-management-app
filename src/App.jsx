@@ -1,9 +1,12 @@
+import { GlobalProvider } from "./GlobalState.jsx";
 import HomePage from "./Pages/HomePage";
 
 export default function App() {
   return (
     <div>
-      <HomePage />
+      <GlobalProvider>
+        <HomePage />
+      </GlobalProvider>
     </div>
   );
 }
