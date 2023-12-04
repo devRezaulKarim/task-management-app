@@ -21,6 +21,12 @@ export const reducer = (state, action) => {
         }),
       };
 
+    case types.deleteTask:
+      return {
+        ...state,
+        tasks: [...state.tasks].filter((task) => task.id !== action.payload),
+      };
+
     default:
       return state;
   }

@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { GlobalContext } from "../../GlobalState";
+import { IoMdAddCircleOutline } from "react-icons/io";
 
 export default function AddTaskForm() {
   const { addTask } = useContext(GlobalContext);
@@ -23,8 +24,10 @@ export default function AddTaskForm() {
       <form onSubmit={handleAddTask} action="">
         <input type="text" name="" id="" placeholder="Note your task" />
         <div>
-          <span className="material-symbols-outlined">add_task</span>
-          <button>Add task</button>
+          <button>
+            <IoMdAddCircleOutline className="addIcon" />
+            <span>Add task</span>
+          </button>
         </div>
       </form>
     </div>

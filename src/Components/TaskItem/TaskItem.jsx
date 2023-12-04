@@ -6,7 +6,7 @@ import { GlobalContext } from "../../GlobalState";
 
 export default function TaskItem({ task }) {
   const { id, task: taskText, isComplete } = task;
-  const { completeTask } = useContext(GlobalContext);
+  const { completeTask, deleteTask } = useContext(GlobalContext);
 
   return (
     <div className="taskItem">
@@ -22,15 +22,15 @@ export default function TaskItem({ task }) {
           />
           <label htmlFor={id}>Complete</label>
         </div>
-        {
+        {!isComplete && (
           <button>
             <FaEdit className="editIcon" />
-            Edit
+            <span>Edit</span>
           </button>
-        }
-        <button>
+        )}
+        <button onClick={() => deleteTask(id)}>
           <MdDeleteForever className="deleteIcon" />
-          Delete
+          <span>Delete</span>
         </button>
       </div>
     </div>

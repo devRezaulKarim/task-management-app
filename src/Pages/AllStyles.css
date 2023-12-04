@@ -26,7 +26,7 @@
   }
   & span {
     font-size: 4rem;
-    /* color: #1a936f; */
+    color: #1a936f;
   }
 }
 
@@ -67,20 +67,23 @@
       & button {
         background: transparent;
         font-size: 2rem;
-        padding-top: 0.4rem;
-        padding-bottom: 0.2rem;
         border: none;
         border-radius: 0.8rem;
         font-weight: 600;
         text-transform: uppercase;
         cursor: pointer;
         color: #fff;
-      }
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
 
-      & span {
-        font-size: 2.2rem;
-        margin-right: 0.5rem;
-        font-weight: 600;
+        & .addIcon {
+          font-size: 2.5rem;
+        }
+        & span {
+          font-size: 2rem;
+          color: #fff;
+        }
       }
 
       &::after {
@@ -212,14 +215,19 @@ responsive
         padding-right: 18rem;
       }
       & div {
-        padding: 1.5rem 1.2rem;
+        padding: 1.4rem 1.2rem;
         & button {
-          font-size: 2.2rem;
+          font-size: 2.4rem;
+
+          & .addIcon {
+            font-size: 3rem;
+          }
+          & span {
+            font-size: 2.2 rem;
+            padding: 0 0.2rem;
+          }
         }
-        & span {
-          font-size: 3rem;
-          padding: 0 0.2rem;
-        }
+
         &::after {
           left: 1.2rem;
           height: 0.5rem;
@@ -250,9 +258,15 @@ responsive
         padding-right: 8rem;
       }
       & div {
-        padding: 0.8rem 0.5rem;
+        padding: 0.9rem 0.5rem;
         & button {
-          display: none;
+          & .addIcon {
+            font-size: 2.4rem;
+            width: 6rem;
+          }
+          & span {
+            display: none;
+          }
         }
         & span {
           font-size: 2.8rem;
