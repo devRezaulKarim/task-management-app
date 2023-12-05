@@ -20,6 +20,16 @@ export const reducer = (state, action) => {
           return task;
         }),
       };
+    case types.updateTask:
+      return {
+        ...state,
+        tasks: [...state.tasks].map((t) => {
+          if (t.id === action.payload.id) {
+            return { ...t, task: action.payload.task };
+          }
+          return t;
+        }),
+      };
 
     case types.deleteTask:
       return {

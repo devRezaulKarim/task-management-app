@@ -12,9 +12,14 @@
   font-size: 62.5%;
 }
 
+/*
+home page style
+*/
+
 .homeContainer {
   box-shadow: 0 0 1rem 0.5rem lightgray;
   max-width: 60%;
+  min-height: 80vh;
   margin: auto;
   margin-top: 4rem;
   padding: 3rem 1.5rem;
@@ -29,6 +34,10 @@
     color: #1a936f;
   }
 }
+
+/*
+add form style
+*/
 
 .addTaskForm {
   width: 70%;
@@ -66,7 +75,6 @@
 
       & button {
         background: transparent;
-        font-size: 2rem;
         border: none;
         border-radius: 0.8rem;
         font-weight: 600;
@@ -79,10 +87,15 @@
 
         & .addIcon {
           font-size: 2.5rem;
+          transition: all 1s;
         }
         & span {
           font-size: 2rem;
           color: #fff;
+        }
+
+        &:hover& .addIcon {
+          transform: rotateZ(-720deg);
         }
       }
 
@@ -103,6 +116,9 @@
   }
 }
 
+/*
+task list style
+*/
 .tasksList {
   margin: auto;
   width: 90%;
@@ -111,83 +127,109 @@
   padding: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  column-gap: 3rem;
+  column-gap: 2rem;
   row-gap: 2rem;
+
   & .taskItem {
     padding: 1rem;
     background-color: #caf3e7;
     border-radius: 0.4rem;
     border: 2px solid #1a936f;
 
+    & textarea {
+      resize: none;
+      width: 100%;
+      height: 3.5rem;
+      font-size: 1.6rem;
+      padding: 0.5rem;
+    }
     & .task {
       font-size: 2rem;
       margin-bottom: 1.5rem;
+      word-break: break-all;
     }
     & .complete {
       text-decoration: line-through;
       color: gray;
     }
+
     & .btns {
       display: flex;
+      align-items: center;
       justify-content: space-between;
+      text-align: right;
 
-      & div {
+      & .checkBox {
         display: flex;
         align-items: center;
-        gap: 0.4rem;
-        font-size: 2.2rem;
-        font-weight: 600;
+        gap: 0.5rem;
+        background: #1a936f;
         border: 1px solid #1a936f;
-        background-color: #1a936f;
-        padding: 0.2rem 0.5rem;
+        padding: 0.3rem 0.5rem;
         border-radius: 0.4rem;
-        color: #fff;
         transition: all 0.2s;
-        cursor: pointer;
 
-        & input,
+        & input {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
         & label {
-          cursor: pointer;
+          font-size: 1.4rem;
+          color: #fff;
+          transition: all 0.2s;
         }
-
         &:hover {
-          background-color: transparent;
+          background: transparent;
+        }
+        &:hover& label {
           color: #1a936f;
-          border: 1px solid #1a936f;
         }
       }
+
       & button {
-        font-size: 1.5rem;
-        padding: 0.2rem 0.5rem;
-        background-color: #1a936f;
+        display: flex;
+        align-items: center;
+        background: #1a936f;
         border: 1px solid #1a936f;
-        border-radius: 0.4rem;
+        padding: 0.3rem 0.5rem;
         color: #fff;
+        border-radius: 0.4rem;
         transition: all 0.2s;
-        cursor: pointer;
 
+        & .saveIcon {
+          justify-self: flex-end;
+        }
+
+        & .deleteIcon,
         & .editIcon {
-          font-size: 1.3rem;
-          margin-right: 0.5rem;
+          font-size: 1.6rem;
         }
-        & .deleteIcon {
-          padding-top: 0.2rem;
-          font-size: 1.5rem;
-          margin-right: 0.2rem;
+        & span {
+          font-size: 1.4rem;
+          color: #fff;
+          transition: all 0.2s;
         }
-
-        &:hover:last-child {
-          background-color: transparent;
-          color: red;
-          border: 1px solid red;
+        &.editBtn:hover {
+          border: 1px solid rgb(255, 196, 0);
+          background: transparent;
+          color: rgb(255, 196, 0);
+        }
+        &.editBtn:hover span {
+          color: rgb(255, 196, 0);
         }
 
         &:hover {
-          background-color: transparent;
-          color: rgb(245, 189, 6);
-          border: 1px solid rgb(245, 189, 6);
+          border: 1px solid red;
+          background: transparent;
+          color: red;
+        }
+        &:hover span {
+          color: red;
         }
       }
+    }
+    & .btnEnd {
+      justify-content: center;
     }
   }
 }
@@ -238,6 +280,33 @@ responsive
       }
     }
   }
+  .tasksList {
+    & .taskItem {
+      & .task {
+        font-size: 3rem;
+      }
+      & .btns {
+        & .checkBox {
+          & input {
+            width: 2rem;
+            height: 2rem;
+          }
+          & label {
+            font-size: 2.6rem;
+          }
+        }
+        & button {
+          & .deleteIcon,
+          & .editIcon {
+            font-size: 2.8rem;
+          }
+          & span {
+            font-size: 2.6rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -279,6 +348,36 @@ responsive
         }
         &:hover::after {
           width: 40%;
+        }
+      }
+    }
+  }
+
+  .tasksList {
+    width: 98%;
+    padding: 1rem;
+    & .taskItem {
+      & .task {
+        font-size: 2.5rem;
+      }
+      & .btns {
+        & .checkBox {
+          & input {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+          & label {
+            font-size: 1.6rem;
+          }
+        }
+        & button {
+          & .deleteIcon,
+          & .editIcon {
+            font-size: 1.8rem;
+          }
+          & span {
+            font-size: 1.6rem;
+          }
         }
       }
     }

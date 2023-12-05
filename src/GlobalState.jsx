@@ -25,6 +25,14 @@ export const GlobalProvider = ({ children }) => {
       payload: id,
     });
   }
+
+  function updateTask(taskInfo) {
+    dispatch({
+      type: types.updateTask,
+      payload: taskInfo,
+    });
+  }
+
   function deleteTask(id) {
     dispatch({
       type: types.deleteTask,
@@ -43,6 +51,7 @@ export const GlobalProvider = ({ children }) => {
         addTask,
         deleteTask,
         completeTask,
+        updateTask,
       }}
     >
       {children}
