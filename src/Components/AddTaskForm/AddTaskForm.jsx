@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { GlobalContext } from "../../GlobalState";
+import { GlobalContext } from "../../GlobalState/GlobalState";
 import { IoMdAddCircleOutline } from "react-icons/io";
 
 export default function AddTaskForm() {

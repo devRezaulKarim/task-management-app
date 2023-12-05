@@ -3,7 +3,7 @@ import { useContext } from "react";
 import AddTaskForm from "../Components/AddTaskForm/AddTaskForm";
 import TaskList from "../Components/TaskList/TaskList";
 import "./AllStyles.css";
-import { GlobalContext } from "../GlobalState";
+import { GlobalContext } from "../GlobalState/GlobalState";
 
 export default function HomePage() {
   const { tasks } = useContext(GlobalContext);

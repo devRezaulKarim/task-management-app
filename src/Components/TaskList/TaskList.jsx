@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { GlobalContext } from "../../GlobalState";
+import { GlobalContext } from "../../GlobalState/GlobalState";
 import TaskItem from "../TaskItem/TaskItem";
 
 export default function TaskList() {
@@ -9,7 +9,7 @@ export default function TaskList() {
   return (
     <div className="tasksList">
       {tasks.map((task) => (
-        <TaskItem key={task.id} task={task} edit={{isEdit, setIsEdit}} />
+        <TaskItem key={task.id} task={task} edit={{ isEdit, setIsEdit }} />
       ))}
     </div>
   );

@@ -1,4 +1,4 @@
-import { GlobalProvider } from "./GlobalState.jsx";
+import { GlobalProvider } from "./GlobalState/GlobalState.jsx";
 import HomePage from "./Pages/HomePage";
 
 export default function App() {

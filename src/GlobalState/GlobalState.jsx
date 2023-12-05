@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { createContext, useEffect, useReducer } from "react";
-import { reducer } from "./useReduce.js";
-import { types } from "./actionTypes.js";
+import { reducer } from "../useReducer/useReduce.js";
+import { types } from "../useReducer/actionTypes.js";
 
 const initValue = JSON.parse(localStorage.getItem("initValue")) ?? {
   tasks: [],

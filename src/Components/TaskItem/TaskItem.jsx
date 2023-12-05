@@ -2,7 +2,7 @@
 import { useContext, useState } from "react";
 import { AiFillEdit } from "react-icons/ai";
 import { MdDeleteForever } from "react-icons/md";
-import { GlobalContext } from "../../GlobalState";
+import { GlobalContext } from "../../GlobalState/GlobalState";
 import { IoMdSave } from "react-icons/io";
 
 export default function TaskItem({ task, edit: { isEdit, setIsEdit } }) {
