@@ -9,7 +9,12 @@ export default function TaskList() {
   return (
     <div className="tasksList">
       {tasks.map((task) => (
-        <TaskItem key={task.id} task={task} edit={{ isEdit, setIsEdit }} />
+        <TaskItem
+          key={task.id}
+          task={task}
+          length={tasks.length}
+          edit={{ isEdit, setIsEdit }}
+        />
       ))}
     </div>
   );

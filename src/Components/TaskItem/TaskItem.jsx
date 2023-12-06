@@ -5,7 +5,11 @@ import { MdDeleteForever } from "react-icons/md";
 import { GlobalContext } from "../../GlobalState/GlobalState";
 import { IoMdSave } from "react-icons/io";
 
-export default function TaskItem({ task, edit: { isEdit, setIsEdit } }) {
+export default function TaskItem({
+  task,
+  length,
+  edit: { isEdit, setIsEdit },
+}) {
   const { id, task: taskText, isComplete } = task;
   const { completeTask, deleteTask, updateTask } = useContext(GlobalContext);
   const [updateText, setUpdateText] = useState(taskText);
@@ -18,7 +22,7 @@ export default function TaskItem({ task, edit: { isEdit, setIsEdit } }) {
   };
 
   return (
-    <div className="taskItem">
+    <div className={`taskItem ${length === 1 && "singleTask"}`}>
       {isEdit === id ? (
         <textarea
           name=""

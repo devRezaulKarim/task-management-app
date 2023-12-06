@@ -240,6 +240,10 @@ task list style
   }
 }
 
+.singleTask {
+  width: 32.5rem;
+}
+
 /**
 responsive
 
@@ -314,6 +318,9 @@ responsive
         }
       }
     }
+  }
+  .singleTask {
+    width: unset;
   }
 }
 
@@ -390,5 +397,8 @@ responsive
         }
       }
     }
+  }
+  .singleTask {
+    width: unset;
   }
 }
