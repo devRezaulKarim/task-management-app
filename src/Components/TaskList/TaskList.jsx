@@ -1,10 +1,14 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "../../GlobalState/GlobalState";
 import TaskItem from "../TaskItem/TaskItem";
 
 export default function TaskList() {
   const { tasks } = useContext(GlobalContext);
-  const [isEdit, setIsEdit] = useState(false);
+  const [isEdit, setIsEdit] = useState(null);
+
+  useEffect(() => {
+    setIsEdit(null);
+  }, [tasks]);
 
   return (
     <div className="tasksList">
