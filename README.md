@@ -57,30 +57,30 @@ src/
 |-- Components/
 
 
-|   |-- AddTaskForm.jsx
+   |   |-- AddTaskForm.jsx
 
-|   |-- TaskItem.jsx
+   |   |-- TaskItem.jsx
 
-|   |-- TaskList.jsx
+   |   |-- TaskList.jsx
 
 
 |-- GlobalState/
 
-|   |-- GlobalState.jsx 
+   |   |-- GlobalState.jsx 
 
 
 |-- Pages/
 
-|   |-- AllStyles.css
+   |   |-- AllStyles.css
 
-|   |-- HomePage.jsx
+   |   |-- HomePage.jsx
 
 
 |-- useReducer/
 
-|   |-- actionTypes.js
+   |   |-- actionTypes.js
 
-|   |-- useReduce.js
+   |   |-- useReduce.js
 
 
 |-- App.jsx
