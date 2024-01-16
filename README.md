@@ -64,9 +64,11 @@ src/
    |   |-- TaskList.jsx
 
 
+
 |-- GlobalState/
 
    |   |-- GlobalState.jsx 
+
 
 
 |-- Pages/
@@ -76,11 +78,13 @@ src/
    |   |-- HomePage.jsx
 
 
+
 |-- useReducer/
 
    |   |-- actionTypes.js
 
    |   |-- useReduce.js
+
 
 
 |-- App.jsx
