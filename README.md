@@ -52,19 +52,39 @@ A simple Task Management app built with React, react-router-dom, useReducer, and
 
 
 src/
+
+
 |-- Components/
+
+
 |   |-- AddTaskForm.jsx
+
 |   |-- TaskItem.jsx
+
 |   |-- TaskList.jsx
+
+
 |-- GlobalState/
+
 |   |-- GlobalState.jsx 
+
+
 |-- Pages/
+
 |   |-- AllStyles.css
+
 |   |-- HomePage.jsx
+
+
 |-- useReducer/
+
 |   |-- actionTypes.js
+
 |   |-- useReduce.js
+
+
 |-- App.jsx
+
 |-- main.jsx
 
 
